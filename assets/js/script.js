@@ -7,10 +7,10 @@ $(function () { // When the DOM is ready
             audio = new Audio();
             audio.loop = true;
             audio.autoplay = false;
-            audio.src = 'assets/audio/audio.mp3';
+            audio.src = './assets/audio/hush.mp3';
             audio.controls = true;
             audio.poster = '';
-            audio.title = 'Test 123!';
+            audio.title = 'HushLittleBaby';
             audio.play().then(r => function () {
                 audio.pause();
             });
@@ -66,100 +66,100 @@ $(function () { // When the DOM is ready
     function stopAudio() {
         audio.pause();
     }
-    $('#timerButton').click(function() {
-        switch (timerMode) {
-            case 0:
-                $(this).html('15<sup>M</sup>');
-                timerMode = 15;
-                clearTimeout(timerID);
-                timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
-                break;
-            case 15:
-                $(this).html('30<sup>M</sup>');
-                timerMode = 30;
-                clearTimeout(timerID);
-                timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
-                break;
-            case 30:
-                $(this).html('45<sup>M</sup>');
-                timerMode = 45;
-                clearTimeout(timerID);
-                timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
-                break;
-            case 45:
-                $(this).html('60<sup>M</sup>');
-                timerMode = 60;
-                clearTimeout(timerID);
-                timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
-                break;
-            case 60:
-                $(this).html('&#x221e;');
-                timerMode = 0;
-                clearTimeout(timerID);
-                break;
-            default:
-                $(this).html('&#x221e;');
-                timerMode = 0;
-                clearTimeout(timerID);
-                break;
-        }
-    });
-    $('#speedButton').click(function() {
-        switch (audio.playbackRate) {
-            case 0.5:
-                audio.playbackRate = 1;
-                $(this).html('1<sup>x</sup>');
-                break;
-            case 1:
-                audio.playbackRate = 1.25;
-                $(this).html('1.25<sup>x</sup>');
-                break;
-            case 1.25:
-                audio.playbackRate = 1.5;
-                $(this).html('1.5<sup>x</sup>');
-                break;
-            case 1.5:
-                audio.playbackRate = 2;
-                $(this).html('2<sup>x</sup>');
-                break;
-            case 2:
-                audio.playbackRate = 0.5;
-                $(this).html('0.5<sup>x</sup>');
-                break;
-            default:
-                audio.playbackRate = 1;
-                $(this).html('1<sup>x</sup>');
-                break;
-        }
-    });
-    $('#volumeButton').click(function() {
-        switch (audio.volume) {
-            case 0.2:
-                audio.volume = 0.4;
-                $(this).html('40<sup>%</sup>');
-                break;
-            case 0.4:
-                audio.volume = 0.6;
-                $(this).html('60<sup>%</sup>');
-                break;
-            case 0.6:
-                audio.volume = 0.8;
-                $(this).html('80<sup>%</sup>');
-                break;
-            case 0.8:
-                audio.volume = 1;
-                $(this).html('100<sup>%</sup>');
-                break;
-            case 1:
-                audio.volume = 0.2;
-                $(this).html('20<sup>%</sup>');
-                break;
-            default:
-                audio.volume = 1;
-                $(this).html('100<sup>%</sup>');
-                break;
-        }
-    });
+    // $('#timerButton').click(function() {
+    //     switch (timerMode) {
+    //         case 0:
+    //             $(this).html('15<sup>M</sup>');
+    //             timerMode = 15;
+    //             clearTimeout(timerID);
+    //             timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
+    //             break;
+    //         case 15:
+    //             $(this).html('30<sup>M</sup>');
+    //             timerMode = 30;
+    //             clearTimeout(timerID);
+    //             timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
+    //             break;
+    //         case 30:
+    //             $(this).html('45<sup>M</sup>');
+    //             timerMode = 45;
+    //             clearTimeout(timerID);
+    //             timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
+    //             break;
+    //         case 45:
+    //             $(this).html('60<sup>M</sup>');
+    //             timerMode = 60;
+    //             clearTimeout(timerID);
+    //             timerID = setTimeout(stopAudio, timerMode * 1000 * 60);
+    //             break;
+    //         case 60:
+    //             $(this).html('&#x221e;');
+    //             timerMode = 0;
+    //             clearTimeout(timerID);
+    //             break;
+    //         default:
+    //             $(this).html('&#x221e;');
+    //             timerMode = 0;
+    //             clearTimeout(timerID);
+    //             break;
+    //     }
+    // });
+    // $('#speedButton').click(function() {
+    //     switch (audio.playbackRate) {
+    //         case 0.5:
+    //             audio.playbackRate = 1;
+    //             $(this).html('1<sup>x</sup>');
+    //             break;
+    //         case 1:
+    //             audio.playbackRate = 1.25;
+    //             $(this).html('1.25<sup>x</sup>');
+    //             break;
+    //         case 1.25:
+    //             audio.playbackRate = 1.5;
+    //             $(this).html('1.5<sup>x</sup>');
+    //             break;
+    //         case 1.5:
+    //             audio.playbackRate = 2;
+    //             $(this).html('2<sup>x</sup>');
+    //             break;
+    //         case 2:
+    //             audio.playbackRate = 0.5;
+    //             $(this).html('0.5<sup>x</sup>');
+    //             break;
+    //         default:
+    //             audio.playbackRate = 1;
+    //             $(this).html('1<sup>x</sup>');
+    //             break;
+    //     }
+    // });
+    // $('#volumeButton').click(function() {
+    //     switch (audio.volume) {
+    //         case 0.2:
+    //             audio.volume = 0.4;
+    //             $(this).html('40<sup>%</sup>');
+    //             break;
+    //         case 0.4:
+    //             audio.volume = 0.6;
+    //             $(this).html('60<sup>%</sup>');
+    //             break;
+    //         case 0.6:
+    //             audio.volume = 0.8;
+    //             $(this).html('80<sup>%</sup>');
+    //             break;
+    //         case 0.8:
+    //             audio.volume = 1;
+    //             $(this).html('100<sup>%</sup>');
+    //             break;
+    //         case 1:
+    //             audio.volume = 0.2;
+    //             $(this).html('20<sup>%</sup>');
+    //             break;
+    //         default:
+    //             audio.volume = 1;
+    //             $(this).html('100<sup>%</sup>');
+    //             break;
+    //     }
+    // });
 
     function avg(arr){
         const total = arr.reduce(function(sum, b) { return sum + b; });
@@ -170,28 +170,18 @@ $(function () { // When the DOM is ready
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    /**
-     * Store the transition end event names for convenience.
-     */
-    var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
+    const transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
 
-    /**
-     * Trigger the play button states upon clicking.
-     */
-    $( '#playButton' ).click(function( e ) {
+    $('#playButton').click(function( e ) {
         e.preventDefault();
         if ( $(this).hasClass('stop') ) {
-            $( this ).removeClass( 'stop' )
-                .addClass( 'to-play' );
+            $(this).removeClass('stop').addClass( 'to-play' );
         } else if ( !$(this).hasClass('to-play') ) {
             $( this ).addClass( 'stop' );
         }
     });
 
-    /**
-     * Remove the 'to-play' class upon transition end.
-     */
-    $( document ).on( transitionEnd, '.to-play', function() {
-        $( this ).removeClass( 'to-play' );
+    $(document).on(transitionEnd, '.to-play', function() {
+        $(this).removeClass( 'to-play' );
     });
 });

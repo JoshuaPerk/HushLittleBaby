@@ -301,6 +301,33 @@ h3 {
     transform: rotate(360deg);
   }
 }
+.menuBlock {
+  text-align: left;
+  padding: 10px 20px;
+}
+.menuBlock > p {
+  font-size: 0.875rem;
+  line-height: 1.6rem;
+}
+.menuBlock > p a {
+  color: #aeaeae;
+}
+
+.pill {
+  border-radius: 3px;
+  padding: 1px 3px;
+  background: #f69c95;
+  color: #fcf7f7;
+}
+.pill.pill-yellow {
+  background: #fcd18b;
+  color: #342b1d;
+}
+.pill.pill-blue {
+  background: #61b9e0;
+  color: #f3f8fa;
+}
+
 #settings {
   text-align: left;
   padding: 10px 20px;

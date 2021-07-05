@@ -305,6 +305,33 @@ $half-size: ($btn-size / 2);
   }
 }
 
+.menuBlock {
+  text-align: left;
+  padding: 10px 20px;
+  > p {
+    font-size: 0.875rem;
+    line-height: 1.6rem;
+    a {
+      color: #aeaeae;
+    }
+  }
+}
+
+.pill {
+  border-radius: 3px;
+  padding: 1px 3px;
+  background: #f69c95;
+  color: #fcf7f7;
+  &.pill-yellow {
+    background: #fcd18b;
+    color: #342b1d;
+  }
+  &.pill-blue {
+    background: #61b9e0;
+    color: #f3f8fa;
+  }
+}
+
 #settings {
   text-align: left;
   padding: 10px 20px;
